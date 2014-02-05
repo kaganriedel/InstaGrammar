@@ -1,0 +1,544 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3DE74F679A6D40A1AE354951 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F39E0CD4754CC1B9B94A9F /* libPods.a */; };
+		6D33E01E18A15BC400CE55B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D33E01D18A15BC400CE55B9 /* Foundation.framework */; };
+		6D33E02018A15BC400CE55B9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D33E01F18A15BC400CE55B9 /* CoreGraphics.framework */; };
+		6D33E02218A15BC400CE55B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D33E02118A15BC400CE55B9 /* UIKit.framework */; };
+		6D33E02818A15BC400CE55B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D33E02618A15BC400CE55B9 /* InfoPlist.strings */; };
+		6D33E02A18A15BC400CE55B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D33E02918A15BC400CE55B9 /* main.m */; };
+		6D33E02E18A15BC400CE55B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D33E02D18A15BC400CE55B9 /* AppDelegate.m */; };
+		6D33E03118A15BC400CE55B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D33E02F18A15BC400CE55B9 /* Main.storyboard */; };
+		6D33E03418A15BC400CE55B9 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D33E03318A15BC400CE55B9 /* FeedViewController.m */; };
+		6D33E03618A15BC400CE55B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D33E03518A15BC400CE55B9 /* Images.xcassets */; };
+		6D33E03D18A15BC400CE55B9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D33E03C18A15BC400CE55B9 /* XCTest.framework */; };
+		6D33E03E18A15BC400CE55B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D33E01D18A15BC400CE55B9 /* Foundation.framework */; };
+		6D33E03F18A15BC400CE55B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D33E02118A15BC400CE55B9 /* UIKit.framework */; };
+		6D33E04718A15BC400CE55B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D33E04518A15BC400CE55B9 /* InfoPlist.strings */; };
+		6D33E04918A15BC400CE55B9 /* InstaGrammerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D33E04818A15BC400CE55B9 /* InstaGrammerTests.m */; };
+		6D33E05318A1617600CE55B9 /* murray320x320.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D33E05218A1617600CE55B9 /* murray320x320.jpg */; };
+		6D33E05718A1835F00CE55B9 /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D33E05618A1835F00CE55B9 /* ImagePickerViewController.m */; };
+		6D33E05A18A1B92F00CE55B9 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D33E05918A1B92F00CE55B9 /* SearchViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6D33E04018A15BC400CE55B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D33E01218A15BC400CE55B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D33E01918A15BC400CE55B9;
+			remoteInfo = InstaGrammer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05F39E0CD4754CC1B9B94A9F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C691A65DCCE48EB89755C61 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		6D33E01A18A15BC400CE55B9 /* InstaGrammer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaGrammer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D33E01D18A15BC400CE55B9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6D33E01F18A15BC400CE55B9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6D33E02118A15BC400CE55B9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6D33E02518A15BC400CE55B9 /* InstaGrammer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InstaGrammer-Info.plist"; sourceTree = "<group>"; };
+		6D33E02718A15BC400CE55B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6D33E02918A15BC400CE55B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6D33E02B18A15BC400CE55B9 /* InstaGrammer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InstaGrammer-Prefix.pch"; sourceTree = "<group>"; };
+		6D33E02C18A15BC400CE55B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6D33E02D18A15BC400CE55B9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6D33E03018A15BC400CE55B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6D33E03218A15BC400CE55B9 /* FeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		6D33E03318A15BC400CE55B9 /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		6D33E03518A15BC400CE55B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6D33E03B18A15BC400CE55B9 /* InstaGrammerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaGrammerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D33E03C18A15BC400CE55B9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6D33E04418A15BC400CE55B9 /* InstaGrammerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InstaGrammerTests-Info.plist"; sourceTree = "<group>"; };
+		6D33E04618A15BC400CE55B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6D33E04818A15BC400CE55B9 /* InstaGrammerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstaGrammerTests.m; sourceTree = "<group>"; };
+		6D33E05218A1617600CE55B9 /* murray320x320.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = murray320x320.jpg; sourceTree = "<group>"; };
+		6D33E05518A1835F00CE55B9 /* ImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerViewController.h; sourceTree = "<group>"; };
+		6D33E05618A1835F00CE55B9 /* ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerViewController.m; sourceTree = "<group>"; };
+		6D33E05818A1B92F00CE55B9 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		6D33E05918A1B92F00CE55B9 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D33E01718A15BC400CE55B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D33E02018A15BC400CE55B9 /* CoreGraphics.framework in Frameworks */,
+				6D33E02218A15BC400CE55B9 /* UIKit.framework in Frameworks */,
+				6D33E01E18A15BC400CE55B9 /* Foundation.framework in Frameworks */,
+				3DE74F679A6D40A1AE354951 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D33E03818A15BC400CE55B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D33E03D18A15BC400CE55B9 /* XCTest.framework in Frameworks */,
+				6D33E03F18A15BC400CE55B9 /* UIKit.framework in Frameworks */,
+				6D33E03E18A15BC400CE55B9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6D33E01118A15BC400CE55B9 = {
+			isa = PBXGroup;
+			children = (
+				6D33E02318A15BC400CE55B9 /* InstaGrammer */,
+				6D33E04218A15BC400CE55B9 /* InstaGrammerTests */,
+				6D33E01C18A15BC400CE55B9 /* Frameworks */,
+				6D33E01B18A15BC400CE55B9 /* Products */,
+				6C691A65DCCE48EB89755C61 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		6D33E01B18A15BC400CE55B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D33E01A18A15BC400CE55B9 /* InstaGrammer.app */,
+				6D33E03B18A15BC400CE55B9 /* InstaGrammerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D33E01C18A15BC400CE55B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D33E01D18A15BC400CE55B9 /* Foundation.framework */,
+				6D33E01F18A15BC400CE55B9 /* CoreGraphics.framework */,
+				6D33E02118A15BC400CE55B9 /* UIKit.framework */,
+				6D33E03C18A15BC400CE55B9 /* XCTest.framework */,
+				05F39E0CD4754CC1B9B94A9F /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D33E02318A15BC400CE55B9 /* InstaGrammer */ = {
+			isa = PBXGroup;
+			children = (
+				6D33E02C18A15BC400CE55B9 /* AppDelegate.h */,
+				6D33E02D18A15BC400CE55B9 /* AppDelegate.m */,
+				6D33E02F18A15BC400CE55B9 /* Main.storyboard */,
+				6D33E03218A15BC400CE55B9 /* FeedViewController.h */,
+				6D33E03318A15BC400CE55B9 /* FeedViewController.m */,
+				6D33E05518A1835F00CE55B9 /* ImagePickerViewController.h */,
+				6D33E05618A1835F00CE55B9 /* ImagePickerViewController.m */,
+				6D33E05818A1B92F00CE55B9 /* SearchViewController.h */,
+				6D33E05918A1B92F00CE55B9 /* SearchViewController.m */,
+				6D33E03518A15BC400CE55B9 /* Images.xcassets */,
+				6D33E02418A15BC400CE55B9 /* Supporting Files */,
+			);
+			path = InstaGrammer;
+			sourceTree = "<group>";
+		};
+		6D33E02418A15BC400CE55B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D33E05418A1617B00CE55B9 /* Images */,
+				6D33E02518A15BC400CE55B9 /* InstaGrammer-Info.plist */,
+				6D33E02618A15BC400CE55B9 /* InfoPlist.strings */,
+				6D33E02918A15BC400CE55B9 /* main.m */,
+				6D33E02B18A15BC400CE55B9 /* InstaGrammer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6D33E04218A15BC400CE55B9 /* InstaGrammerTests */ = {
+			isa = PBXGroup;
+			children = (
+				6D33E04818A15BC400CE55B9 /* InstaGrammerTests.m */,
+				6D33E04318A15BC400CE55B9 /* Supporting Files */,
+			);
+			path = InstaGrammerTests;
+			sourceTree = "<group>";
+		};
+		6D33E04318A15BC400CE55B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D33E04418A15BC400CE55B9 /* InstaGrammerTests-Info.plist */,
+				6D33E04518A15BC400CE55B9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6D33E05418A1617B00CE55B9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				6D33E05218A1617600CE55B9 /* murray320x320.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D33E01918A15BC400CE55B9 /* InstaGrammer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D33E04C18A15BC400CE55B9 /* Build configuration list for PBXNativeTarget "InstaGrammer" */;
+			buildPhases = (
+				2136C70753E247F486E47D3D /* Check Pods Manifest.lock */,
+				6D33E01618A15BC400CE55B9 /* Sources */,
+				6D33E01718A15BC400CE55B9 /* Frameworks */,
+				6D33E01818A15BC400CE55B9 /* Resources */,
+				2F88937700894446B5CB66F8 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InstaGrammer;
+			productName = InstaGrammer;
+			productReference = 6D33E01A18A15BC400CE55B9 /* InstaGrammer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6D33E03A18A15BC400CE55B9 /* InstaGrammerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D33E04F18A15BC400CE55B9 /* Build configuration list for PBXNativeTarget "InstaGrammerTests" */;
+			buildPhases = (
+				6D33E03718A15BC400CE55B9 /* Sources */,
+				6D33E03818A15BC400CE55B9 /* Frameworks */,
+				6D33E03918A15BC400CE55B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D33E04118A15BC400CE55B9 /* PBXTargetDependency */,
+			);
+			name = InstaGrammerTests;
+			productName = InstaGrammerTests;
+			productReference = 6D33E03B18A15BC400CE55B9 /* InstaGrammerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D33E01218A15BC400CE55B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Kagan Riedel";
+				TargetAttributes = {
+					6D33E03A18A15BC400CE55B9 = {
+						TestTargetID = 6D33E01918A15BC400CE55B9;
+					};
+				};
+			};
+			buildConfigurationList = 6D33E01518A15BC400CE55B9 /* Build configuration list for PBXProject "InstaGrammer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6D33E01118A15BC400CE55B9;
+			productRefGroup = 6D33E01B18A15BC400CE55B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D33E01918A15BC400CE55B9 /* InstaGrammer */,
+				6D33E03A18A15BC400CE55B9 /* InstaGrammerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D33E01818A15BC400CE55B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D33E03618A15BC400CE55B9 /* Images.xcassets in Resources */,
+				6D33E02818A15BC400CE55B9 /* InfoPlist.strings in Resources */,
+				6D33E05318A1617600CE55B9 /* murray320x320.jpg in Resources */,
+				6D33E03118A15BC400CE55B9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D33E03918A15BC400CE55B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D33E04718A15BC400CE55B9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2136C70753E247F486E47D3D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2F88937700894446B5CB66F8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D33E01618A15BC400CE55B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D33E03418A15BC400CE55B9 /* FeedViewController.m in Sources */,
+				6D33E02E18A15BC400CE55B9 /* AppDelegate.m in Sources */,
+				6D33E05A18A1B92F00CE55B9 /* SearchViewController.m in Sources */,
+				6D33E05718A1835F00CE55B9 /* ImagePickerViewController.m in Sources */,
+				6D33E02A18A15BC400CE55B9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D33E03718A15BC400CE55B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D33E04918A15BC400CE55B9 /* InstaGrammerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6D33E04118A15BC400CE55B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D33E01918A15BC400CE55B9 /* InstaGrammer */;
+			targetProxy = 6D33E04018A15BC400CE55B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6D33E02618A15BC400CE55B9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D33E02718A15BC400CE55B9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6D33E02F18A15BC400CE55B9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D33E03018A15BC400CE55B9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6D33E04518A15BC400CE55B9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D33E04618A15BC400CE55B9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6D33E04A18A15BC400CE55B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6D33E04B18A15BC400CE55B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D33E04D18A15BC400CE55B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C691A65DCCE48EB89755C61 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InstaGrammer/InstaGrammer-Prefix.pch";
+				INFOPLIST_FILE = "InstaGrammer/InstaGrammer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6D33E04E18A15BC400CE55B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C691A65DCCE48EB89755C61 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InstaGrammer/InstaGrammer-Prefix.pch";
+				INFOPLIST_FILE = "InstaGrammer/InstaGrammer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6D33E05018A15BC400CE55B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/InstaGrammer.app/InstaGrammer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InstaGrammer/InstaGrammer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "InstaGrammerTests/InstaGrammerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6D33E05118A15BC400CE55B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/InstaGrammer.app/InstaGrammer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InstaGrammer/InstaGrammer-Prefix.pch";
+				INFOPLIST_FILE = "InstaGrammerTests/InstaGrammerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D33E01518A15BC400CE55B9 /* Build configuration list for PBXProject "InstaGrammer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D33E04A18A15BC400CE55B9 /* Debug */,
+				6D33E04B18A15BC400CE55B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D33E04C18A15BC400CE55B9 /* Build configuration list for PBXNativeTarget "InstaGrammer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D33E04D18A15BC400CE55B9 /* Debug */,
+				6D33E04E18A15BC400CE55B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D33E04F18A15BC400CE55B9 /* Build configuration list for PBXNativeTarget "InstaGrammerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D33E05018A15BC400CE55B9 /* Debug */,
+				6D33E05118A15BC400CE55B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6D33E01218A15BC400CE55B9 /* Project object */;
+}
