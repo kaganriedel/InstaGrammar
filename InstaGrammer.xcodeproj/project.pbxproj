@@ -25,6 +25,12 @@
 		6D33E05318A1617600CE55B9 /* murray320x320.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D33E05218A1617600CE55B9 /* murray320x320.jpg */; };
 		6D33E05718A1835F00CE55B9 /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D33E05618A1835F00CE55B9 /* ImagePickerViewController.m */; };
 		6D33E05A18A1B92F00CE55B9 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D33E05918A1B92F00CE55B9 /* SearchViewController.m */; };
+		6DCCE33418A2AE4B001CBC9D /* FeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DCCE33318A2AE4B001CBC9D /* FeedTableViewCell.m */; };
+		6DCCE33718A2E134001CBC9D /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DCCE33618A2E134001CBC9D /* ProfileViewController.m */; };
+		6DCCE33A18A2FC63001CBC9D /* PhotoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DCCE33918A2FC63001CBC9D /* PhotoCollectionViewController.m */; };
+		6DCCE33D18A2FCD7001CBC9D /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DCCE33C18A2FCD7001CBC9D /* PhotoCollectionViewCell.m */; };
+		6DCCE34018A31751001CBC9D /* likeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DCCE33F18A31751001CBC9D /* likeButton.m */; };
+		6DCCE34318A32142001CBC9D /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DCCE34218A32142001CBC9D /* CommentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +70,18 @@
 		6D33E05618A1835F00CE55B9 /* ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerViewController.m; sourceTree = "<group>"; };
 		6D33E05818A1B92F00CE55B9 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		6D33E05918A1B92F00CE55B9 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		6DCCE33218A2AE4B001CBC9D /* FeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewCell.h; sourceTree = "<group>"; };
+		6DCCE33318A2AE4B001CBC9D /* FeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewCell.m; sourceTree = "<group>"; };
+		6DCCE33518A2E134001CBC9D /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		6DCCE33618A2E134001CBC9D /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		6DCCE33818A2FC63001CBC9D /* PhotoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewController.h; sourceTree = "<group>"; };
+		6DCCE33918A2FC63001CBC9D /* PhotoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewController.m; sourceTree = "<group>"; };
+		6DCCE33B18A2FCD7001CBC9D /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		6DCCE33C18A2FCD7001CBC9D /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		6DCCE33E18A31751001CBC9D /* likeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = likeButton.h; sourceTree = "<group>"; };
+		6DCCE33F18A31751001CBC9D /* likeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = likeButton.m; sourceTree = "<group>"; };
+		6DCCE34118A32142001CBC9D /* CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
+		6DCCE34218A32142001CBC9D /* CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,12 +147,24 @@
 				6D33E02C18A15BC400CE55B9 /* AppDelegate.h */,
 				6D33E02D18A15BC400CE55B9 /* AppDelegate.m */,
 				6D33E02F18A15BC400CE55B9 /* Main.storyboard */,
+				6DCCE34118A32142001CBC9D /* CommentViewController.h */,
+				6DCCE34218A32142001CBC9D /* CommentViewController.m */,
 				6D33E03218A15BC400CE55B9 /* FeedViewController.h */,
 				6D33E03318A15BC400CE55B9 /* FeedViewController.m */,
+				6DCCE33218A2AE4B001CBC9D /* FeedTableViewCell.h */,
+				6DCCE33318A2AE4B001CBC9D /* FeedTableViewCell.m */,
+				6DCCE33E18A31751001CBC9D /* likeButton.h */,
+				6DCCE33F18A31751001CBC9D /* likeButton.m */,
 				6D33E05518A1835F00CE55B9 /* ImagePickerViewController.h */,
 				6D33E05618A1835F00CE55B9 /* ImagePickerViewController.m */,
 				6D33E05818A1B92F00CE55B9 /* SearchViewController.h */,
 				6D33E05918A1B92F00CE55B9 /* SearchViewController.m */,
+				6DCCE33518A2E134001CBC9D /* ProfileViewController.h */,
+				6DCCE33618A2E134001CBC9D /* ProfileViewController.m */,
+				6DCCE33818A2FC63001CBC9D /* PhotoCollectionViewController.h */,
+				6DCCE33918A2FC63001CBC9D /* PhotoCollectionViewController.m */,
+				6DCCE33B18A2FCD7001CBC9D /* PhotoCollectionViewCell.h */,
+				6DCCE33C18A2FCD7001CBC9D /* PhotoCollectionViewCell.m */,
 				6D33E03518A15BC400CE55B9 /* Images.xcassets */,
 				6D33E02418A15BC400CE55B9 /* Supporting Files */,
 			);
@@ -313,10 +343,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D33E03418A15BC400CE55B9 /* FeedViewController.m in Sources */,
+				6DCCE33D18A2FCD7001CBC9D /* PhotoCollectionViewCell.m in Sources */,
+				6DCCE34018A31751001CBC9D /* likeButton.m in Sources */,
+				6DCCE33418A2AE4B001CBC9D /* FeedTableViewCell.m in Sources */,
 				6D33E02E18A15BC400CE55B9 /* AppDelegate.m in Sources */,
 				6D33E05A18A1B92F00CE55B9 /* SearchViewController.m in Sources */,
+				6DCCE33718A2E134001CBC9D /* ProfileViewController.m in Sources */,
 				6D33E05718A1835F00CE55B9 /* ImagePickerViewController.m in Sources */,
+				6DCCE34318A32142001CBC9D /* CommentViewController.m in Sources */,
 				6D33E02A18A15BC400CE55B9 /* main.m in Sources */,
+				6DCCE33A18A2FC63001CBC9D /* PhotoCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

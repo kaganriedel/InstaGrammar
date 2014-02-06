@@ -59,8 +59,6 @@
     else if (buttonIndex == 2) //Cancel
     {
         [self.tabBarController setSelectedIndex:0];
-
-       
     }
 }
 
@@ -78,9 +76,9 @@
          {
              PFObject *photo = [PFObject objectWithClassName:@"Photo"];
              [photo setObject:file forKey:@"imageFile"];
-             [photo setObject:[NSDate date] forKey:@"timeStamp"];
-             PFUser *user = [PFUser currentUser];
-             [photo setObject:user.username forKey:@"username"];
+             
+             [photo setObject:[PFUser currentUser] forKey:@"user"];
+             
              [photo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
               {
                   if (!error)

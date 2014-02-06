@@ -7,6 +7,9 @@
 //
 
 #import "FeedViewController.h"
+#import "CommentViewController.h"
+#import "FeedTableViewCell.h"
+#import "likeButton.h"
 
 @interface FeedViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 {
@@ -34,8 +37,6 @@
     
 }
 
-
-
 -(void)viewDidAppear:(BOOL)animated
 {
     if (![PFUser currentUser]) {
@@ -48,7 +49,7 @@
         login.logInView.logo = label;
         [self presentViewController:login animated:animated completion:nil];
     }
-    [self loadObjects]; //careful. this clears the table. so you will lose where you were looking last...`
+    [self loadObjects];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -56,72 +57,53 @@
     titleLabel.transform = CGAffineTransformMakeTranslation(0, self.tableView.contentOffset.y);
 }
 
-
--(PFTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
+-(FeedTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
 {
-    PFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedCell"];
+    FeedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedCell"];
     if (!cell)
     {
-        cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"FeedCell"];
-        cell.frame = CGRectMake(0, 0, 320, 495);
-        cell.contentView.frame = CGRectMake(0, 0, 320, 494);
-        
-        UIImageView *userImageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 4, 35, 35)];
-        userImageView.image = [UIImage imageNamed:@"murray320x320.jpg"];
-        
-        UIImageView *photoImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 42, 320, 320)];
-        PFFile *file =[object objectForKey:@"imageFile"];
-        [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-            if (!error) {
-                photoImageView.image = [UIImage imageWithData: data];
-            }
-        }];
-        
-        UILabel *userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(63, 11, 129, 21)];
-        userNameLabel.font = [UIFont systemFontOfSize:11.0];
-        userNameLabel.text = [object objectForKey:@"username"];
-        
-        UILabel *timeStampLabel = [[UILabel alloc] initWithFrame:CGRectMake(200, 11, 100, 21)];
-        timeStampLabel.font = [UIFont systemFontOfSize:11.0];
-        NSDate *date = [object objectForKey:@"timeStamp"];
-        NSDateFormatter *dateFormatter = [NSDateFormatter new];
-        dateFormatter.dateStyle = NSDateFormatterShortStyle;
-        dateFormatter.timeStyle = NSDateFormatterShortStyle;
-        timeStampLabel.text = [dateFormatter stringFromDate:date];
-
-        UILabel *likesLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 408, 280, 21)];
-        likesLabel.font = [UIFont systemFontOfSize:13.0];
-        likesLabel.text = @"\u2661 Yash and Nick really love this lion photo";
-
-        UILabel *commentsLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 437, 280, 36)];
-        commentsLabel.font = [UIFont systemFontOfSize:13.0];
-        commentsLabel.text = @"Holy crap. It's a lion.\nNo way it totally is!";
-        commentsLabel.lineBreakMode = NSLineBreakByWordWrapping;
-        commentsLabel.numberOfLines = 2;
-
-        
-        UIButton *likeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [likeButton addTarget:self action:@selector(onLikeButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-        likeButton.frame = CGRectMake(20, 370, 44, 30);
-        [likeButton setTitle:@"Like" forState:UIControlStateNormal];
-        likeButton.reversesTitleShadowWhenHighlighted = YES;
-        
-        UIButton *commentButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [commentButton addTarget:self action:@selector(onCommentButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-        commentButton.frame = CGRectMake(232, 370, 68, 30);
-        [commentButton setTitle:@"Comment" forState:UIControlStateNormal];
-
-        [cell.contentView addSubview:userImageView];
-        [cell.contentView addSubview:photoImageView];
-        [cell.contentView addSubview:userNameLabel];
-        [cell.contentView addSubview:timeStampLabel];
-        [cell.contentView addSubview:likesLabel];
-        [cell.contentView addSubview:commentsLabel];
-        [cell.contentView addSubview:likeButton];
-        [cell.contentView addSubview:commentButton];
+        cell = [[FeedTableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"FeedCell"];
     }
     
-       return cell;
+    PFUser *user = [object objectForKey:@"user"];
+    [user fetchIfNeeded];
+    
+    cell.contentView.frame = CGRectMake(0, 0, 320, 494);
+    cell.frame = CGRectMake(0, 0, 320, 495);
+    cell.userImageView.image = [UIImage imageNamed:@"murray320x320.jpg"];
+    cell.userImageView.file = [user objectForKey:@"profilepic"];
+    [cell.userImageView loadInBackground];
+    cell.photoImageView.image = nil;
+    cell.photoImageView.file = [object objectForKey:@"imageFile"];
+    [cell.photoImageView loadInBackground];
+    cell.userNameLabel.text = [user objectForKey:@"username"];
+
+    NSDateFormatter *dateFormatter = [NSDateFormatter new];
+    dateFormatter.dateStyle = NSDateFormatterShortStyle;
+    dateFormatter.timeStyle = NSDateFormatterShortStyle;
+
+    cell.timeStampLabel.text = [dateFormatter stringFromDate:object.createdAt];
+    cell.likesLabel.text = @"\u2661 ";
+    
+    PFObject *sourceObject = object;
+    PFRelation *relation = [sourceObject relationforKey:@"likedby"];
+    
+    [[relation query] findObjectsInBackgroundWithBlock:^(NSArray *results, NSError *error) {
+        for (int i = 0; i < results.count; i++) {
+            PFObject * tempObject = results[i];
+            cell.likesLabel.text = [NSString stringWithFormat:@"%@ %@", cell.likesLabel.text, tempObject[@"username"]];
+        }
+    }];
+    
+    cell.commentsLabel.text = @"Holy crap. It's a lion.\nNo way it totally is!";
+    cell.likeButton.object = object;
+    [cell.likeButton addTarget:self action:@selector(onLikeButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+    //scrollview delays the touch. highlighting
+    
+    [cell.commentButton addTarget:self action:@selector(onCommentButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+    return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -139,14 +121,27 @@
     [logInController dismissViewControllerAnimated:YES completion:nil];
 }
 
--(void)onLikeButtonPressed
+-(void)onLikeButtonPressed:(LikeButton *)sender
 {
-    NSLog(@"Like button pressed");
+
+    PFObject *object = sender.object;
+    
+    PFUser *user = [PFUser currentUser];
+    PFRelation *relation = [object relationforKey:@"likedby"];
+    [relation addObject:user];
+    [object saveInBackground];
 }
 
--(void)onCommentButtonPressed
+-(void)onCommentButtonPressed:(LikeButton *)sender
 {
-        NSLog(@"Comment button pressed");
+    PFObject *object = sender.object;
+    [self performSegueWithIdentifier:@"CommentSegue" sender:object];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(PFObject *)sender
+{
+    CommentViewController *cvc = segue.destinationViewController;
+    cvc.object = sender;
 }
 
 -(BOOL)prefersStatusBarHidden
